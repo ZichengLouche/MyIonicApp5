@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-nav-link router-direction="back">
+    <ion-button expand="full" color="medium">
+      <ion-icon name="arrow-back" slot="end"></ion-icon>
+      ion-nav go back
+    </ion-button>
+  </ion-nav-link>
+
+  <!-- 2020.11.6 Andy Go back from code -->
+  <ion-button expand="full" color="warning" (click)="goBack()">
+    <ion-icon name="arrow-back" slot="end"></ion-icon>
+    ion-nav go back from Code
+  </ion-button>
+
+  <!-- 2020.11.11 Andy test canGoBack -->
+  <ion-button expand="full" color="warning" (click)="canGoBack()">
+    <ion-icon name="arrow-back" slot="end"></ion-icon>
+    ion-nav test canGoBack from Code
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref="/classroom/course/introduction/{{courseId}}" text="返回" icon="chevron-back-outline" color="medium" *ngIf="showBackButton"></ion-back-button>
+    <ion-title>Ionic Modal Nav</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full" (click)="presentModal()">Open Modal</ion-button>
+
+  <ion-nav [root]="rootPage" #ionSubNav [rootParams]="{lesson: selectedItem}"></ion-nav>
+  <!-- <ion-nav #nav></ion-nav> -->
+</ion-content>

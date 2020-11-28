@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()" *ngIf="level == 0">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+      <ion-back-button *ngIf="level > 0"></ion-back-button>
+    </ion-buttons>
+    <ion-title>modalContent -> My Modal Level: {{ level }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Not really necessary because of ion-back-button! -->
+  <ion-nav-link router-direction="back" *ngIf="level > 0">
+    <ion-button expand="full" color="medium">
+      <ion-icon name="arrow-back" slot="end"></ion-icon>
+      ion-nav go back
+    </ion-button>
+  </ion-nav-link>
+
+  <!-- 2020.11.6 Andy Go back from code -->
+  <ion-button expand="full" color="warning" (click)="goBack()" *ngIf="level > 0">
+    <ion-icon name="arrow-back" slot="end"></ion-icon>
+    ion-nav go back from Code
+  </ion-button>
+
+  <!-- Open another modal -->
+  <ion-nav-link router-direction="forward" [component]="nextPage" [componentProps]="{level: level+1}">
+    <ion-button expand="full" color="success">
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+      Go to level {{ level + 1 }}
+    </ion-button>
+  </ion-nav-link>
+
+  <!-- Open another modal from code -->
+  <ion-button expand="full" color="secondary" (click)="goForward()">
+    <ion-icon name="arrow-forward" slot="end"></ion-icon>
+    Next Level from Code
+  </ion-button>
+
+  <!-- 2020.11.6 Andy Open another modal page -->
+  <ion-nav-link router-direction="forward" [component]="settingsPage" [componentProps]="{ p: 'p-xmt'}">
+    <ion-button expand="full" color="success">
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+      Go to settings
+    </ion-button>
+  </ion-nav-link>
+  <!-- 2020.11.11 Andy Open another modal page -->
+  <ion-nav-link router-direction="forward" [component]="settingsPage" [componentProps]="{ p: selectedItem }">
+    <ion-button expand="full" color="success">
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+      Go to settings
+    </ion-button>
+  </ion-nav-link>
+
+  <!-- Go back to the first open modal in the view stack -->
+  <ion-nav-link router-direction="root" [component]="nextPage" [componentProps]="{level: 0}" *ngIf="level > 0">
+    <ion-button expand="full" color="tertiary">
+      <ion-icon name="arrow-back" slot="end"></ion-icon>
+      Go to root
+    </ion-button>
+  </ion-nav-link>
+
+  <!-- Go back to first modal from code -->
+  <ion-button expand="full" color="dark" (click)="goRoot()" *ngIf="level > 0">
+    <ion-icon name="arrow-back" slot="end"></ion-icon>
+    Go root from Code
+  </ion-button>
+
+
+  <!-- 2020.11.11 Andy test canGoBack -->
+  <ion-button expand="full" color="warning" (click)="canGoBack()">
+    <ion-icon name="arrow-back" slot="end"></ion-icon>
+    ion-nav test canGoBack from Code
+  </ion-button>
+
+  <p>
+    Andy test ion-nav pass params. lesson : 
+    <!-- <ion-text color="primary" [innerText]="JSON.stringfy(lesson)">
+      <h1>Awesome text</h1>
+    </ion-text> -->
+    {{ lesson }}
+  </p>
+</ion-content>
