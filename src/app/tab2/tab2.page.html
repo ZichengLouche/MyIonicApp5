@@ -1,0 +1,237 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="camera">
+        <ion-icon name="camera"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="bookmark">
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <!-- Default Segment -->
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="friends">
+      <ion-label>Friends</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="enemies">
+      <ion-label>Enemies</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Disabled Segment -->
+  <ion-segment (ionChange)="segmentChanged($event)" disabled value="sunny">
+    <ion-segment-button value="sunny">
+      <ion-label>Sunny</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="rainy">
+      <ion-label>Rainy</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Segment with anchors -->
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button href="#dogs" value="dogs">
+      <ion-label>Dogs</ion-label>
+    </ion-segment-button>
+    <ion-segment-button href="#cats" value="cats">
+      <ion-label>Cats</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Scrollable Segment -->
+  <ion-segment scrollable value="heart">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="globe">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="basket">
+      <ion-icon name="basket"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Segment with secondary color -->
+  <ion-segment (ionChange)="segmentChanged($event)" color="secondary">
+    <ion-segment-button value="standard">
+      <ion-label>Standard</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="hybrid">
+      <ion-label>Hybrid</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="sat">
+      <ion-label>Satellite</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Segment with default selection -->
+  <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+    <ion-segment-button value="python">
+      <ion-label>Python</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="javascript">
+      <ion-label>Javascript</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Icon bottom -->
+  <ion-segment value="1">
+    <ion-segment-button value="1" layout="icon-bottom">
+      <ion-icon name="call"></ion-icon>
+      <ion-label>Item One</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2" layout="icon-bottom">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Item Two</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3" layout="icon-bottom">
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>Item Three</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Icon top -->
+  <ion-segment value="2">
+    <ion-segment-button value="1">
+      <ion-label>Item One</ion-label>
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Item Two</ion-label>
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>Item Three</ion-label>
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Icon start -->
+  <ion-segment value="1">
+    <ion-segment-button value="1" layout="icon-start">
+      <ion-label>Item One</ion-label>
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="2" layout="icon-start">
+      <ion-label>Item Two</ion-label>
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="3" layout="icon-start">
+      <ion-label>Item Three</ion-label>
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Icon end -->
+  <ion-segment value="1">
+    <ion-segment-button value="1" layout="icon-end">
+      <ion-icon name="call"></ion-icon>
+      <ion-label>Item One</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2" disabled layout="icon-end">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Item Two</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3" layout="icon-end">
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>Item Three</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>
+
+<!-- Andy 2020.10.18 9:19 -->
+<h2>Chip example</h2>
+<ion-chip>
+  <ion-label>Default</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-label color="secondary">Secondary Label</ion-label>
+</ion-chip>
+
+<ion-chip color="secondary">
+  <ion-label color="dark">Secondary w/ Dark label</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-icon name="pin"></ion-icon>
+  <ion-label>Default</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-icon name="heart" color="dark"></ion-icon>
+  <ion-label>Default</ion-label>
+</ion-chip>
+
+<ion-chip>
+  <ion-label>Button Chip</ion-label>
+  <ion-icon name="close-circle"></ion-icon>
+</ion-chip>
+
+<ion-chip>
+  <ion-icon name="pin" color="primary"></ion-icon>
+  <ion-label>Icon Chip</ion-label>
+  <ion-icon name="close"></ion-icon>
+</ion-chip>
+
+<ion-chip>
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+  <ion-label>Avatar Chip</ion-label>
+  <ion-icon name="close-circle"></ion-icon>
+</ion-chip>
+
+
+<ion-chip class="ion-margin-start">
+  <ion-avatar>
+    <img src="assets/ionic-docs-demo-api/avatar.svg">
+  </ion-avatar>
+  <ion-label>Kit Bishop</ion-label>
+</ion-chip>
+
+<ion-list-header>ion-avatar Usage example</ion-list-header>
+<ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+
+<ion-chip>
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+  <ion-label>Chip Avatar</ion-label>
+</ion-chip>
+
+<ion-item>
+  <ion-avatar slot="start">
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+  <ion-label>Item Avatar</ion-label>
+</ion-item>
+
+<!-- Andy 2020.10.18 9:19 -->
+<!-- <ion-popover>
+  <Popover></Popover>
+</ion-popover> -->
+
+<ion-button expand="block" (click)="presentPopover($event)">Show Popover</ion-button>

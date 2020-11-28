@@ -1,0 +1,19 @@
+:host(.title-ios.title-default) {
+    align-items: flex-start;
+}
+
+
+.ion-activatable {
+    position: relative;
+    overflow: hidden;
+}
+
+ion-col {
+    background: #F7F7F7;
+    border    : 1px solid lightgray;
+}
+
+ion-row.custom-col-3 ion-col {
+    flex-basis: 30%;
+    max-width : 30%;
+}
